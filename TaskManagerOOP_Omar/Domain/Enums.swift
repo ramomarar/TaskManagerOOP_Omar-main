@@ -1,23 +1,18 @@
 import Foundation
 
-/// Basic capability for toggling completion
-protocol Completable {
-    var isCompleted: Bool { get set }
-    func toggleComplete()
+enum TaskPriority: String, CaseIterable, Codable, Identifiable {
+    case low, medium, high
+    var id: String { rawValue }
 }
 
-/// Items that can be scheduled
-protocol Schedulable {
-    var dueDate: Date? { get set }
-}
-
-/// Items that can be ranked in importance/urgency
-protocol Prioritizable {
-    var priority: TaskPriority { get set }
-}
-
-/// Ensures we can serialize to a neutral representation for persistence
-protocol DTOConvertible {
-    associatedtype DTO: Codable
-    func toDTO() -> DTO
+enum TaskKind: String, CaseIterable, Codable, Identifiable {
+    case work, personal, shopping
+    var id: String { rawValue }
+    var displayName: String {
+        switch self {
+        case .work: return "Work"
+        case .personal: return "Personal"
+        case .shopping: return "Shopping"
+        }
+    }
 }

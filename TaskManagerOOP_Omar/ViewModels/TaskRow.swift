@@ -38,6 +38,10 @@ struct TaskRow: View {
     }
     
     func priorityColor(_ p: TaskPriority) -> Color {
-        switch p { case .low: .blue; case .medium: .orange; case .high: .red }
+        switch p {
+        case .low: return .blue
+        case .medium: return .orange
+        case .high: return .red
+        }
     }
 }

@@ -29,9 +29,30 @@
 		E8208E172E5EBFBF00B51718 /* TaskManagerOOP_OmarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskManagerOOP_OmarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E8208E6E2E67F10C00B51718 /* Exceptions for "TaskManagerOOP_Omar" folder in "TaskManagerOOP_Omar" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/TaskManagerOOPTests.swift,
+			);
+			target = E8208DFA2E5EBFBC00B51718 /* TaskManagerOOP_Omar */;
+		};
+		E8208E702E67F11400B51718 /* Exceptions for "TaskManagerOOP_Omar" folder in "TaskManagerOOP_OmarTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/TaskManagerOOPTests.swift,
+			);
+			target = E8208E0C2E5EBFBF00B51718 /* TaskManagerOOP_OmarTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E8208DFD2E5EBFBC00B51718 /* TaskManagerOOP_Omar */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E8208E6E2E67F10C00B51718 /* Exceptions for "TaskManagerOOP_Omar" folder in "TaskManagerOOP_Omar" target */,
+				E8208E702E67F11400B51718 /* Exceptions for "TaskManagerOOP_Omar" folder in "TaskManagerOOP_OmarTests" target */,
+			);
 			path = TaskManagerOOP_Omar;
 			sourceTree = "<group>";
 		};
@@ -43,6 +64,11 @@
 		E8208E1A2E5EBFBF00B51718 /* TaskManagerOOP_OmarUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TaskManagerOOP_OmarUITests;
+			sourceTree = "<group>";
+		};
+		E8208E722E67F22500B51718 /* Preview Content */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,10 +101,11 @@
 		E8208DF22E5EBFBC00B51718 = {
 			isa = PBXGroup;
 			children = (
+				E8208DFC2E5EBFBC00B51718 /* Products */,
 				E8208DFD2E5EBFBC00B51718 /* TaskManagerOOP_Omar */,
 				E8208E102E5EBFBF00B51718 /* TaskManagerOOP_OmarTests */,
 				E8208E1A2E5EBFBF00B51718 /* TaskManagerOOP_OmarUITests */,
-				E8208DFC2E5EBFBC00B51718 /* Products */,
+				E8208E722E67F22500B51718 /* Preview Content */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +136,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				E8208DFD2E5EBFBC00B51718 /* TaskManagerOOP_Omar */,
+				E8208E722E67F22500B51718 /* Preview Content */,
 			);
 			name = TaskManagerOOP_Omar;
 			packageProductDependencies = (

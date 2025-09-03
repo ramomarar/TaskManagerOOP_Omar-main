@@ -6,7 +6,7 @@ struct TaskManagerOOPApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
                 .environmentObject(store)
         }
     }

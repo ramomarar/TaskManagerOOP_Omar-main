@@ -1,11 +1,12 @@
 import XCTest
-@testable import TaskManagerOOP
+@testable import TaskManagerOOP_Omar
 
 final class TaskManagerOOPTests: XCTestCase {
     func testDuplicateTitleThrows() throws {
         let store = TaskStore()
         // Clean start
-        try? UserDefaults.standard.removeObject(forKey: "TaskManagerOOP.tasks")
+        //try?
+        UserDefaults.standard.removeObject(forKey: "TaskManagerOOP.tasks")
         store.objectWillChange.send()
         
         let a = try WorkTask(title: "Demo")
@@ -33,4 +34,3 @@ final class TaskManagerOOPTests: XCTestCase {
         XCTAssertEqual((rebuilt as! ShoppingTask).quantity, 12)
     }
 }
-
