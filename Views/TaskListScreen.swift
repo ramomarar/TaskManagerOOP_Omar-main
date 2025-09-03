@@ -1,3 +1,4 @@
+
 import SwiftUI
 
 struct TaskListScreen: View {
@@ -6,10 +7,10 @@ struct TaskListScreen: View {
     let title: String
     let kind: TaskKind?
     let systemImage: String
-    
+
     @State private var showForm = false
     @State private var editingTask: BaseTask? = nil
-    
+
     var body: some View {
         NavigationStack {
             List {

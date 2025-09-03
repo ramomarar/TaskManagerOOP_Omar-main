@@ -1,3 +1,4 @@
+
 import Foundation
 
 enum TaskError: LocalizedError, Equatable {
@@ -5,7 +6,7 @@ enum TaskError: LocalizedError, Equatable {
     case duplicateTitle
     case invalidDate
     case persistenceFailed
-    
+
     var errorDescription: String? {
         switch self {
         case .emptyTitle: return "Title can't be empty."

@@ -1,12 +1,13 @@
+
 import SwiftUI
 
 struct TaskForm: View {
     enum Result { case created(BaseTask), updated(BaseTask), cancelled }
-    
+
     let kind: TaskKind?
     var taskToEdit: BaseTask?
     var onDone: (Result) -> Void
-    
+
     // Common fields
     @State private var title: String = ""
     @State private var notes: String = ""
@@ -14,16 +15,16 @@ struct TaskForm: View {
     @State private var hasDueDate: Bool = false
     @State private var priority: TaskPriority = .medium
     @State private var selectedKind: TaskKind = .work
-    
+
     // Type-specific
     @State private var project: String = "General"      // Work
     @State private var tag: String = ""                 // Personal
-    @State private var quantity: Int = 1                 // Shopping
+    @State private var quantity: Int = 1                // Shopping
     @State private var unit: String = "pcs"
-    
+
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var store: TaskStore
-    
+
     var body: some View {
         NavigationStack {
             Form {
@@ -65,7 +66,7 @@ struct TaskForm: View {
             .onAppear { hydrateFromEdit() }
         }
     }
-    
+
     private func hydrateFromEdit() {
         if let t = taskToEdit {
             title = t.title
@@ -84,7 +85,7 @@ struct TaskForm: View {
             selectedKind = k
         }
     }
-    
+
     private func save() {
         do {
             let base: BaseTask
@@ -111,7 +112,6 @@ struct TaskForm: View {
             }
             dismiss()
         } catch {
-            // Show inline validation alert via haptic + sheet toast could be added; for simplicity, print
             print("Validation error: \(error)")
         }
     }

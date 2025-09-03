@@ -1,3 +1,4 @@
+
 import Foundation
 
 /// Neutral persistence representation to avoid complexity of class-graph Codable
@@ -11,7 +12,7 @@ struct PersistedTaskDTO: Codable, Identifiable {
     var updatedAt: Date
     var dueDate: Date?
     var priority: TaskPriority
-    
+
     // Type-specific fields
     var project: String?      // WorkTask
     var tag: String?          // PersonalTask

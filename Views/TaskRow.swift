@@ -1,9 +1,10 @@
+
 import SwiftUI
 
 struct TaskRow: View {
     @ObservedObject var task: BaseTask
     let onToggle: () -> Void
-    
+
     var body: some View {
         HStack(alignment: .center, spacing: 12) {
             Button(action: onToggle) {
@@ -16,7 +17,7 @@ struct TaskRow: View {
                     .font(.headline)
                     .strikethrough(task.isCompleted)
                 HStack(spacing: 8) {
-                    if let due = task.dueDate { Label(due, style: .date) }
+                    if let due = task.dueDate { Text(due, style: .date) }
                     Text(task.priority.rawValue.capitalized)
                         .font(.caption)
                         .padding(.horizontal, 6)
@@ -36,12 +37,12 @@ struct TaskRow: View {
                 .clipShape(Capsule())
         }
     }
-    
+
     func priorityColor(_ p: TaskPriority) -> Color {
         switch p {
-        case .low: return .blue
+        case .low:    return .blue
         case .medium: return .orange
-        case .high: return .red
+        case .high:   return .red
         }
     }
 }

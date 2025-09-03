@@ -1,9 +1,10 @@
+
 import Foundation
 
 final class TaskStore: ObservableObject {
     @Published private(set) var tasks: [BaseTask] = []
     private let storageKey = "TaskManagerOOP.tasks"
-    
+
     init() {
         do { try load() } catch { print("⚠️ Load error: \(error)") }
         if tasks.isEmpty {
@@ -17,7 +18,7 @@ final class TaskStore: ObservableObject {
             }
         }
     }
-    
+
     // MARK: CRUD
     func add(_ task: BaseTask) throws {
         if tasks.map({ $0.title.lowercased() }).contains(task.title.lowercased()) {
@@ -26,24 +27,24 @@ final class TaskStore: ObservableObject {
         tasks.append(task)
         try save()
     }
-    
+
     func update(_ task: BaseTask, mutate: () -> Void) throws {
         mutate()
         task.touch()
         try task.validate()
         try save()
     }
-    
+
     func remove(_ task: BaseTask) throws {
         tasks.removeAll { $0.id == task.id }
         try save()
     }
-    
+
     func filtered(by kind: TaskKind?) -> [BaseTask] {
         guard let kind else { return tasks.sorted(by: sortRule) }
         return tasks.filter { $0.kind == kind }.sorted(by: sortRule)
     }
-    
+
     private func sortRule(_ a: BaseTask, _ b: BaseTask) -> Bool {
         // High priority first, then earliest due date, then most recent updated
         if a.priority != b.priority { return a.priority == .high }
@@ -54,7 +55,7 @@ final class TaskStore: ObservableObject {
         default: return a.updatedAt > b.updatedAt
         }
     }
-    
+
     // MARK: Persistence
     private func save() throws {
         let dtos = tasks.map { $0.toDTO() }
@@ -65,7 +66,7 @@ final class TaskStore: ObservableObject {
             throw TaskError.persistenceFailed
         }
     }
-    
+
     private func load() throws {
         guard let data = UserDefaults.standard.data(forKey: storageKey) else { return }
         do {

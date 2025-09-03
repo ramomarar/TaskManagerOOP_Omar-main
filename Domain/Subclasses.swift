@@ -1,9 +1,10 @@
+
 import Foundation
 
 /// Work tasks add a project association (example of inheritance adding behavior)
 final class WorkTask: BaseTask {
     @Published var project: String
-    
+
     init(id: UUID = UUID(),
          title: String,
          notes: String = "",
@@ -21,7 +22,7 @@ final class WorkTask: BaseTask {
 /// Personal tasks demonstrate composition via an optional tag (e.g., Health, Family)
 final class PersonalTask: BaseTask {
     @Published var tag: String?
-    
+
     init(id: UUID = UUID(),
          title: String,
          notes: String = "",
@@ -40,7 +41,7 @@ final class PersonalTask: BaseTask {
 final class ShoppingTask: BaseTask {
     @Published var quantity: Int
     @Published var unit: String
-    
+
     init(id: UUID = UUID(),
          title: String,
          notes: String = "",

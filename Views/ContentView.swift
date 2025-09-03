@@ -1,12 +1,13 @@
+
 import SwiftUI
 
 struct ContentView: View {
     @StateObject private var vm: TaskListViewModel
-    
+
     init(store: TaskStore) {
         _vm = StateObject(wrappedValue: TaskListViewModel(store: store))
     }
-    
+
     var body: some View {
         TabView {
             TaskListScreen(vm: vm, title: "All", kind: nil, systemImage: "checklist")
