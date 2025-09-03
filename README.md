@@ -126,8 +126,3 @@ Tests/             // Unit tests
 - Reminders/notifications for due dates
 - Attachments (images, links) to tasks
 - Accessibility pass (Dynamic Type, VoiceOver labels)
-
----
-
-## 📝 License
-For coursework use. Add your preferred license if publishing.
