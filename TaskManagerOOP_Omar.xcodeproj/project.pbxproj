@@ -60,6 +60,7 @@
 		E8208E872E67F5A300B51718 /* TaskListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListScreen.swift; sourceTree = "<group>"; };
 		E8208E882E67F5A300B51718 /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		E8208E9B2E67F75200B51718 /* TaskManagerOOP_Omar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManagerOOP_Omar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8208E9C2E67F95900B51718 /* README_TaskManagerOOP_Omar.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_TaskManagerOOP_Omar.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 				E8208E842E67F5A300B51718 /* ViewModels */,
 				E8208E892E67F5A300B51718 /* Views */,
 				E8208E9B2E67F75200B51718 /* TaskManagerOOP_Omar.app */,
+				E8208E9C2E67F95900B51718 /* README_TaskManagerOOP_Omar.md */,
 			);
 			sourceTree = "<group>";
 		};
