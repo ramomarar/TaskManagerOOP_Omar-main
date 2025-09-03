@@ -1,12 +1,5 @@
-//
-//  TaskManagerOOPApp.swift
-//  TaskManagerOOPApp
-//
-//  Created by Omar Alkilani on 27/8/2025.
-//
 
 import SwiftUI
-
 
 @main
 struct TaskManagerOOPApp: App {
@@ -14,7 +7,7 @@ struct TaskManagerOOPApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
                 .environmentObject(store)
         }
     }
