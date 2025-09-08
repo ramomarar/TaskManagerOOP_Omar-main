@@ -120,9 +120,5 @@ Tests/             // Unit tests
 
 ---
 
-## 🔮 Extensions to try (optional)
-- Search & sort controls
-- Core Data or CloudKit/iCloud sync
-- Reminders/notifications for due dates
-- Attachments (images, links) to tasks
-- Accessibility pass (Dynamic Type, VoiceOver labels)
+##Github Link
+- https://github.com/ramomarar/TaskManagerOOP_Omar-main/edit/main/README.md
